@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<p class="bg-secondary text-white h2 text-center">Employee Records</p>
+
+	<table class="table table-striped table-hover">
+	
+  <thead>
+  
+    <tr>
+      <th scope="col">S.NO</th>
+      <th scope="col">Name</th>
+      <th scope="col">ID</th>
+      <th scope="col">RollNO.</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+  <!-- for(Employee emp: emplist){} -->
+    <tr th:each="emp : ${employeeList}">
+      <th scope="row" th:text="${empStat.index+1}"></th>
+      <td th:text="${emp.name}">Mark</td>
+      <td th:text="${emp.id}">Otto</td>
+      <td th:text="${emp.roolno}">@mdo</td>
+    </tr>
+    
+  </tbody>
+</table>
+		
+		
+	
+	
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+</html>

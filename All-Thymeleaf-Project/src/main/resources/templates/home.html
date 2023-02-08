@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+				 <h1>simple variable</h1>
+				
+				<div><p>Name :<span th:text="${emp.name}"></span></p>
+				<p>email:<span th:text="${emp.email}"></span></p></div> 
+				<p>Salary:<span th:text="${emp.salary}"></span></p></div> 
+				
+				<h1>Selection variable</h1>
+				
+				<div th:object="${emp}">
+				<p>Name: <span th:text="*{name}"></span></p>
+				<p>email: <span th:text="*{email}"></span></p>
+				</div>
+				
+				
+			
+				
+</body>
+</html>

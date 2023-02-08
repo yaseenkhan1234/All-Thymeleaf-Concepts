@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+				
+				<h1>If Then</h1>
+				
+				<div th:text="${emp.salary >20000} ? 'Great'"></div>
+				<div th:text="${emp.salary >50000} ? 'failed'"></div>
+				
+				
+				
+				<h1>If-Then Else</h1>
+				
+				<div th:text="${emp.salary>500000} ? 'Hi' : 'Bye'"></div>
+				
+				
+				<h1>If-Unless</h1>
+				
+				<div th:if="${emp.salary>20000}">True</div>
+				
+				
+				<div th:if="not ${emp.salary>20000}">false</div>
+				
+			<!--	<div th:unless="${emp.salary>20000}">False</div>-->
+</body>
+</html>
